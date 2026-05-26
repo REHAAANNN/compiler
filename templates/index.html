@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mini Compiler Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <div class="background-glow"></div>
+    <main class="shell">
+        <header class="hero">
+            <div>
+                <p class="eyebrow">Compiler Project</p>
+                <h1>Mini Compiler Studio</h1>
+                <p class="lead">Write English-like instructions, choose a target language, and generate runnable code.</p>
+            </div>
+            <div class="badge">Python • Java • C</div>
+        </header>
+
+        <section class="panel">
+            <div class="controls">
+                <label class="field">
+                    <span>Target language</span>
+                    <select id="target">
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                        <option value="c">C</option>
+                    </select>
+                </label>
+
+                <label class="toggle">
+                    <input type="checkbox" id="run" checked />
+                    <span>Run generated code</span>
+                </label>
+
+                <button id="compile" class="primary">Generate</button>
+                <button id="load-sample" class="ghost">Load sample</button>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <h2>Input</h2>
+                    <textarea id="source" spellcheck="false" placeholder="Type your algorithm here..."></textarea>
+                </div>
+
+                <div class="card">
+                    <h2>Generated code</h2>
+                    <pre id="generated"><code></code></pre>
+                </div>
+
+                <div class="card">
+                    <h2>Program output</h2>
+                    <pre id="output"><code></code></pre>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
